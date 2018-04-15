@@ -1,0 +1,9 @@
+<vehicle>
+    <id>123</id>
+    <sensors>
+        <AFR>456</AFR>
+        <MAP>789</MAP>
+        <TEMP>111</TEMP>
+    </sensors>
+    <communication>HTTPS</communication>
+</vehicle>

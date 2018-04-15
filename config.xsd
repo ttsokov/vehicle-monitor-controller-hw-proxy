@@ -1,0 +1,27 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="vehicle">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:string" name="id"/>
+                <xs:element name="sensors">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="AFR"/>
+                            <xs:element type="xs:string" name="MAP"/>
+                            <xs:element type="xs:string" name="TEMP"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="communication">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="HTTPS"/>
+                            <xs:enumeration value="MQTT"/>
+                            <xs:enumeration value="CoAP"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
